@@ -15,6 +15,7 @@ import {
 
 const Login = () => {
   const accessToken = useSelector((store) => store.user.accessToken);
+  const userId = useSelector((store) => store.user.id) 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [mode, setMode] = useState("login");
@@ -24,7 +25,7 @@ const Login = () => {
 
   useEffect(() => {
     if (accessToken) {
-      navigate("/profile");
+      navigate(`/profile/${userId}`);
   }}, [accessToken])
 
   const onFormSubmit =(event) => {
@@ -41,11 +42,18 @@ const Login = () => {
         if(data.success) { 
           batch(()=> {
             dispatch(user.actions.setUsername(data.response.username)); 
-            dispatch(user.actions.setId(data.response.userId))
+            dispatch(user.actions.setId(data.response.id))
             dispatch(user.actions.setAccessToken(data.response.accessToken));
             dispatch(user.actions.setSavedQuestion(data.response.savedQuestion));
             dispatch(user.actions.setError(null));
           });
+          const persistedStateJSON = {
+            username: data.response.username,
+            id: data.response.id,
+            accessToken: data.response.accessToken,
+            savedQuestion: data.response.savedQuestion
+          }
+          localStorage.setItem("userReduxState", JSON.stringify(persistedStateJSON))
         } else {
           batch (() => {
             dispatch(user.actions.setUsername(null)); 

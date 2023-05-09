@@ -26,7 +26,7 @@ const Register = () => {
     
   useEffect(() => {
     if (accessToken) {
-      navigate('/profile');
+      navigate(`/profile/${userId}`);
     }}, [accessToken])
 
   const onFormSubmit =(event) => {

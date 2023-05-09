@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useSelector } from 'react-redux';
 import { useNavigate} from "react-router-dom";
 import { 
   StartContainer,
@@ -11,10 +12,14 @@ import {
 
 
 const Start = () => {
-const navigate = useNavigate();
+  const accessToken = useSelector((store) => store.user.accessToken);
+  const userId = useSelector((store) => store.user.id)
+  const navigate = useNavigate();
   
   useEffect(() => {
-  });
+    if (accessToken) {
+      navigate(`/profile/${userId}`);
+  }}, [accessToken])
 
   const goLogin = () => {
     navigate("/Login")
