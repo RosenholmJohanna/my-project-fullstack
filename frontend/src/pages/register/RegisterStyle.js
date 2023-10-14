@@ -21,13 +21,11 @@ text-align: center;
 
   a {
     text-decoration: none; 
-    color: white;
-    text-decoration: none; 
+    color: #657383;
+    text-decoration: underline; 
   }
 `
 export const Input=styled.input`
-background-color: white;
-color: #000112;
 `
 
 export const LoginForm = styled.div`
@@ -36,8 +34,7 @@ margin-top: 30%;
 flex-direction: column;  
 width: 80%;
 padding: 2%;
-background-color: #F5F2EB;
-color: #000112;
+background-color: #a7a6ba;
 border-radius: 5%;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 

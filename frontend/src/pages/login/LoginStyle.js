@@ -4,10 +4,11 @@ export const LoginButton=styled.button`
 width: 15em;
 height:40px;
 border-radius:25px;
-background-color: #063455;
+background-color: #c4aead;
 margin-bottom: 5%;
 margin-top: 10%;
 justify-content: center;
+border: 0.5px solid white
 `
 
 export const RegisterLinkText = styled.p `
@@ -53,7 +54,7 @@ margin-top: 30%;
 flex-direction: column;  
 width: 80%;
 padding: 2%;
-background-color: #011627;
+background-color: #98afc7;
 border-radius: 5%;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 

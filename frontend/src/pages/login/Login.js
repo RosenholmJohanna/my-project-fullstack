@@ -73,7 +73,7 @@ const Login = () => {
         <form onSubmit={onFormSubmit} onChange={()=>setMode("login")}>
         <label htmlFor="username">Username</label>
          <input 
-          placeholder="username"
+          // placeholder="username"
           required=""
           type="username" 
           id="username" 
@@ -82,7 +82,7 @@ const Login = () => {
           <label htmlFor="Password">Password</label>
           
          <input
-          placeholder="password"
+          // placeholder="password"
           required=""
           type="password" 
           id="password" 

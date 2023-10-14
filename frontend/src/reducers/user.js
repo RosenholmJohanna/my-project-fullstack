@@ -13,8 +13,7 @@ export const getInitialState = () => {
     };
   };
 
-  console.log(localStorage)
-  
+
   export const user = createSlice({
     name: "user",
     initialState: getInitialState(),
@@ -34,10 +33,15 @@ export const getInitialState = () => {
 
       setSavedQuestion: (state, { payload }) => ({ 
         ...state, savedQuestion: payload }),
-    },
+
+      setMotivation: (state, { payload }) => ({ 
+        ...state, motivation: payload }),
+    }, 
+    
+    
   });
   
-
+  //console.log(user)
   export default user;
 
 

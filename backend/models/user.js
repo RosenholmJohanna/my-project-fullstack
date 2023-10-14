@@ -7,6 +7,10 @@ export const UserSchema = new mongoose.Schema({
       required: true,
       unique: true
     },
+    motivation: {
+      type: Number,
+      default: 1
+    },
     password: {
       type: String,
       required: true,

@@ -61,7 +61,7 @@ const Register = () => {
     <LoginContainer>
     <LoginForm>
       <Logintext>Register</Logintext>  
-        <LogintextTwo>Create account before visit Planet Space</LogintextTwo>  
+        <LogintextTwo>Create account before visit Motivational space</LogintextTwo>  
           <form onSubmit={onFormSubmit}  onChange={()=>setMode("register")}>
             <label htmlFor="username">Username</label>
               <Input 
@@ -89,6 +89,3 @@ const Register = () => {
 }
 
 export default Register;
-
-
-
